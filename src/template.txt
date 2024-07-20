@@ -1,0 +1,32 @@
+{
+    "name": "YOUR NAME",
+    "description": "ABOUT YOU",
+    "resources": [
+        {
+            "name": "RESOURCE 1",
+            "url": "https://URL"
+        },
+        {
+            "name": "RESOURCE 2",
+            "url": "https://URL"
+        },
+        {
+            "name": "RESOURCE 3",
+            "url": "https://URL"
+        }
+    ],
+    "socials": [
+        {
+            "name": "SOCIAL 2",
+            "url": "https://URL"
+        },
+        {
+            "name": "SOCIAL 2",
+            "url": "https://URL"
+        },
+        {
+            "name": "SOCIAL 3",
+            "url": "https://URL"
+        }
+    ]
+},
