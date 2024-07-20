@@ -1,5 +1,6 @@
 # contribute to this repo
 A repository designed to introduce beginners to open source contributions, inspired by [Skynapse/Contribute-To-This-Project](https://github.com/Syknapse/Contribute-To-This-Project).
+At the end your card will be visible at this [https://typesafe-rusty.github.io/contribute-to-this-repo/](https://typesafe-rusty.github.io/contribute-to-this-repo/)
 
 > **Note:** The [Skynapse/Contribute-To-This-Project](https://github.com/Syknapse/Contribute-To-This-Project) repository provides documentation for both GUI and terminal users. This repository focuses exclusively on terminal usage and does not cover GUI (GitHub Desktop) methods.
 
@@ -52,7 +53,7 @@ If you are a new developer and you are wondering if you need to learn Git and Gi
 
 ![Contributor Card](./docs/card.png 'Contributor Card')
 
-You are going to contribute a card just like this one to this [project's web page](). It will include your name, your Social handle, a short description, and 3 links to useful resources that you recommend.
+You are going to contribute a card just like this one to this [project's web page](https://typesafe-rusty.github.io/contribute-to-this-repo/). It will include your name, your Social handle, a short description, and 3 links to useful resources that you recommend.
 
 You will make a copy of the template inside the src/template file and customize it with your own information and add it to DataStore.ts .
 
@@ -266,7 +267,7 @@ _Estimated time: Less than 30 minutes_.
 
 That's it. You have done it! You have now contributed to open source on GitHub.
 
-You have added code to a live web page: [Contribute-to-this-repo]()
+You have added code to a live web page: [https://typesafe-rusty.github.io/contribute-to-this-repo/](https://typesafe-rusty.github.io/contribute-to-this-repo/)
 
 Your changes **won't be visible immediately**; first they have to be reviewed, accepted, and merged by the project maintainer. Once they are merged your card should be visible and live on the page.
 
