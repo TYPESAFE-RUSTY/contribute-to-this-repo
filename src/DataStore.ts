@@ -1,5 +1,38 @@
 import { Card } from "./types";
 export let data: Card[] = [
+    {
+        "name": "Jayesh Wani",
+        "description": "Hi, I am Jayesh Full Stack Developer and Competetive Programmer",
+        "resources": [
+
+            {
+                "name": "MERN Stack",
+                "url": "https://www.youtube.com/watch?v=CvCiNeLnZ00"
+            },
+            {
+                "name": "App Development",
+                "url": "https://developer.android.com/courses/android-basics-compose/course"
+            },
+            {
+                "name": "Striver's DSA sheet",
+                "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/"
+            }
+        ],
+        "socials": [
+            {
+                "name": "github",
+                "url": "https://github.com/JayeshWani7"
+            },
+            {
+                "name": "linkedin",
+                "url": "https://linkedin.com/in/jayesh-wani"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/jayesh_wani7/"
+            }
+        ]
+    },
 
     {
         "name": "SAHIL SINGH",
