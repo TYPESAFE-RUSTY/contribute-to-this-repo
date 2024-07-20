@@ -23,7 +23,7 @@ export default function Home() {
           >
             In Collaboration with{" "}
             <Image
-              src="/acm.png"
+              src="./acm.png"
               alt="Vercel Logo"
               className={styles.vercelLogo}
               width={50}
