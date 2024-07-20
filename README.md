@@ -115,9 +115,6 @@ _Estimated time: Less than 30 minutes_.
 | :------------------------------------------------------: |
 |       **type command ``cd contribute-to-this-repo``**        |
 
-| :arrow_right_hook: A forked project will have the fork symbol on the left. Your fork will have your own GitHub user | ![your fork](/readme-only/clone-your-fork.PNG 'your fork will look like this, with your own user name') |
-| :------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------: |
-
 - This will take a moment as the project is copied to your hard disk.
 - Now you have a local copy of the project.
 
@@ -145,7 +142,7 @@ _Estimated time: Less than 30 minutes_.
 
 #### Step 4: install dependencies
 
-- Once you have changed the branch you can go ahead and istall the dependencies.
+- Once you have changed the branch you can go ahead and install the dependencies.
 - Dependencies are source files that a project needs to work properly it is generally installed using a package manager.(npm for node ; pip for python ; cargo for rust)
 
 | ![Clone](/docs/07.png 'create new branch') |
