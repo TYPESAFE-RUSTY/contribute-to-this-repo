@@ -83,7 +83,7 @@ _Estimated time: Less than 30 minutes_.
 
 - The objective here is to make a copy of this project and place it in your account.
 - A repository (repo) is how a project is called on GitHub and a fork is a copy of it.
-- Make sure you are on the [main page](https://github.com/Syknapse/Contribute-To-This-Project 'https://github.com/Syknapse/Contribute-To-This-Project') of this repo.
+- Make sure you are on the [main page](https://github.com/TYPESAFE-RUSTY/contribute-to-this-repo 'https://github.com/TYPESAFE-RUSTY/contribute-to-this-repo') of this repo.
 
 | ![Fork](/docs/01.png "click on 'Fork'") |
 | :---------------------------------------------: |
