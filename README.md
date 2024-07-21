@@ -1,4 +1,4 @@
-# contribute to this repo
+# Contribute to this repo
 A repository designed to introduce beginners to open source contributions, inspired by [Skynapse/Contribute-To-This-Project](https://github.com/Syknapse/Contribute-To-This-Project).
 At the end your card will be visible at this [https://typesafe-rusty.github.io/contribute-to-this-repo/](https://typesafe-rusty.github.io/contribute-to-this-repo/)
 
