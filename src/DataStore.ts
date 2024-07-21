@@ -65,5 +65,37 @@ export let data: Card[] = [
                 "url": "https://www.instagram.com/printf_sahil_/"
             }
         ]
+    },
+    {
+        "name": "GAVEN D'COSTA",
+        "description": "Hi, I'm Gaven D'costa, a Full Stack Developer with aspirations to become a future entrepreneur. In addition to my professional pursuits, I enjoy going to the gym, watching anime, and have a strong faith in God.",
+        "resources": [
+            {
+                "name": "My Portfolio Website 🗿",
+                "url": "https://gaven-portfolio.vercel.app/"
+            },
+            {
+                "name": "My Bible Website ✝️",
+                "url": "https://gaven-bible.vercel.app/"
+            },
+            {
+                "name": "My Fitness Website 💪",
+                "url": "https://gaven-fitness.vercel.app/"
+            }
+        ],
+        "socials": [
+            {
+                "name": "github",
+                "url": "https://github.com/GavenDcosta"
+            },
+            {
+                "name": "linkedIn",
+                "url": "https://www.linkedin.com/in/gaven-dcosta-b18165239/"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/gavendcosta"
+            }
+        ]
     }
 ]
