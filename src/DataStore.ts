@@ -2,7 +2,7 @@ import { Card } from "./types";
 export let data: Card[] = [
     {
         "name": "Jayesh Wani",
-        "description": "Hi, I am Jayesh Full Stack Developer and Competetive Programmer",
+        "description": "Hi, I am Jayesh, A Full Stack Developer and Competitive Programmer",
         "resources": [
 
             {
