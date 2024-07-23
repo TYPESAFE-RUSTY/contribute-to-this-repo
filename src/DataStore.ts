@@ -1,6 +1,39 @@
 import { Card } from "./types";
 export let data: Card[] = [
     {
+        "name": "Gaurav",
+        "description": "Hi I am Gaurav . Full Stack Developer with Interest in Competitive Programming and System Design.",
+        "resources": [
+            {
+                "name": "Godot ",
+                "icon": "Godot logo",
+                "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/index.html"
+            },
+            {
+                "name": "Flutter Docs",
+                "url": "https://docs.flutter.dev/get-started/codelab"
+            },
+            {
+                "name": "Competitive Programming",
+                "url": "https://cses.fi/book/book.pdf"
+            }
+        ],
+        "socials": [
+            {
+                "name": "github",
+                "url": "https://github.com/gaurav-foroll"
+            },
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/gaurav-m-83a853287"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/g_aura__v"
+            }
+        ]
+    },
+    {
         "name": "Jayesh Wani",
         "description": "Hi, I am Jayesh, A Full Stack Developer and Competitive Programmer",
         "resources": [

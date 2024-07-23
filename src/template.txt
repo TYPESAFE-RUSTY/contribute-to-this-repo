@@ -17,7 +17,7 @@
     ],
     "socials": [
         {
-            "name": "SOCIAL 2",
+            "name": "SOCIAL 1",
             "url": "https://URL"
         },
         {

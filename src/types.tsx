@@ -8,6 +8,7 @@ export interface Card {
 export interface url {
     name: string;
     url: string;
+    icon? : string; 
 }
 
 export let template: Card[] = [{
@@ -16,29 +17,29 @@ export let template: Card[] = [{
     "resources": [
         {
             "name": "RESOURCE 1",
-            "url": "/"
+            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         },
         {
             "name": "RESOURCE 2",
-            "url": "/"
+            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         },
         {
             "name": "RESOURCE 3",
-            "url": "/"
+            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         }
     ],
     "socials": [
         {
-            "name": "SOCIAL 2",
-            "url": "/"
+            "name": "SOCIAL 1",
+            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         },
         {
             "name": "SOCIAL 2",
-            "url": "/"
+            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         },
         {
             "name": "SOCIAL 3",
-            "url": "/"
+            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         }
     ]
 }]
