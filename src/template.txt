@@ -1,32 +1,32 @@
 {
-    "name": "Shaun Rodrigues",
-    "description": "Hey I'm Shaun, a Full Stack Developer with an interest in Game Design and Data Science",
+    "name": "YOUR NAME",
+    "description": "ABOUT YOU",
     "resources": [
         {
-            "name": "Game Development",
-            "url": "https://www.youtube.com/@Brackeys"
+            "name": "RESOURCE 1",
+            "url": "https://URL"
         },
         {
-            "name": "Something used very often",
-            "url": "https://www.ilovepdf.com/"
+            "name": "RESOURCE 2",
+            "url": "https://URL"
         },
         {
-            "name": "Intro to Python Web Development",
-            "url": "https://www.youtube.com/watch?v=yBDHkveJUf4"
+            "name": "RESOURCE 3",
+            "url": "https://URL"
         }
     ],
     "socials": [
         {
-            "name": "github",
-            "url": "https://github.com/TheShaunRodrigues"
+            "name": "SOCIAL 1",
+            "url": "https://URL"
         },
         {
-            "name": "linkedIn",
-            "url": "https://www.linkedin.com/in/shaun-rodrigues-b4b7642b5/"
+            "name": "SOCIAL 2",
+            "url": "https://URL"
         },
         {
-            "name": "instagram",
-            "url": "https://www.instagram.com/shaunrodrigues7/"
+            "name": "SOCIAL 3",
+            "url": "https://URL"
         }
     ]
 },
