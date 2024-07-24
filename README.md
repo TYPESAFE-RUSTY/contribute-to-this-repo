@@ -1,4 +1,4 @@
-# Contribute to this repo
+# [Contribute to this repo](https://typesafe-rusty.github.io/contribute-to-this-repo/)
 A repository designed to introduce beginners to open source contributions, inspired by [Skynapse/Contribute-To-This-Project](https://github.com/Syknapse/Contribute-To-This-Project).
 At the end your card will be visible at this [https://typesafe-rusty.github.io/contribute-to-this-repo/](https://typesafe-rusty.github.io/contribute-to-this-repo/)
 
@@ -178,20 +178,21 @@ _Estimated time: Less than 30 minutes_.
 #### Step 6: Copy the card template
 
 - We will make a copy of the card template to start working on it
-- The **first 2** sections are exactly like: `<div class="row">`. Collapse them by clicking on the arrow by their sides on your VS Code editor as shown in the picture below. (if you are using another editor, you may not be able to use the feature. You'll just have to scroll down). The collapse makes it easy to hide some code components that you won't need to change.
-- You should now see the section that houses all contribution cards: `<div class="grid" id="contributions">`
+
+> **NOTE : DO NOT EDIT THE `template.txt` file** as others will need this file to create their card.
 
 | ![Find card template](/docs/09.png 'Find the card template') |
 | :-----------------------------------------------------------------------: |
 
 - Inside this section, you will find the json object with an ending comma.
 - Copy everything form this file.
-- Edit the file to add your details.
+
 
 | ![Edit card template](/docs/10.png 'Edit the card template') |
 | :-----------------------------------------------------------------------: |
 
 - Paste the whole thing directly below the line indicated. right on top of the most recent contributor's card.
+- Edit the newly pasted content to add your details.
 - Make sure there is a single line of space between your card end and the last card's start. Also add a line of space between your card's start. It's good practice to keep our code as clear as possible
 - Never use a linters or style formatters. The project has Prettier setup
 
