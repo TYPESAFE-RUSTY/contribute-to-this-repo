@@ -127,7 +127,7 @@
 
 .center h1 {
   font-size: xx-large;
-  color: 1px red;
+  color:red;
   filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
 }
 
