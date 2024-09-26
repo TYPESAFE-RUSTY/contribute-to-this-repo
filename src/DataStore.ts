@@ -171,32 +171,60 @@ export let data: Card[] = [
     "name": "Shaun Rodrigues",
     "description": "Hey I'm Shaun, a Full Stack Developer with an interest in Game Design and Data Science.",
     "resources": [
-        {
-            "name": "Game Development",
-            "url": "https://www.youtube.com/@Brackeys"
-        },
-        {
-            "name": "Something used very often",
-            "url": "https://www.ilovepdf.com/"
-        },
-        {
-            "name": "Intro to Python Web Development",
-            "url": "https://www.youtube.com/watch?v=yBDHkveJUf4"
-        }
+      {
+        "name": "Game Development",
+        "url": "https://www.youtube.com/@Brackeys"
+      },
+      {
+        "name": "Something used very often",
+        "url": "https://www.ilovepdf.com/"
+      },
+      {
+        "name": "Intro to Python Web Development",
+        "url": "https://www.youtube.com/watch?v=yBDHkveJUf4"
+      }
     ],
     "socials": [
-        {
-            "name": "github",
-            "url": "https://github.com/TheShaunRodrigues"
-        },
-        {
-            "name": "linkedIn",
-            "url": "https://www.linkedin.com/in/shaun-rodrigues-b4b7642b5/"
-        },
-        {
-            "name": "instagram",
-            "url": "https://www.instagram.com/shaunrodrigues7/"
-        }
+      {
+        "name": "github",
+        "url": "https://github.com/TheShaunRodrigues"
+      },
+      {
+        "name": "linkedIn",
+        "url": "https://www.linkedin.com/in/shaun-rodrigues-b4b7642b5/"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/shaunrodrigues7/"
+      }
+    ]
+  },
+  {
+    "name": "Vinay Pawar",
+    "description": "Average neovim and arch user",
+    "resources": [
+      {
+        "name": "Git Branching Game",
+        "url": "https://learngitbranching.js.org/"
+      },
+      {
+        "name": "Node basics",
+        "url": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+      }
+    ],
+    "socials": [
+      {
+        "name": "github",
+        "url": "https://github.com/Vinay4912"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/vinay-pawar-a5613327a/"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/v_i_nay._.20/"
+      }
     ]
   },
 ];
