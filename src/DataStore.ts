@@ -1,5 +1,7 @@
+import { GoDot } from "react-icons/go";
 import { Card } from "./types";
-export let data: Card[] = [
+import { SiGodotengine } from "react-icons/si";
+export const data: Card[] = [
   {
     name: "Gaurav",
     description:
@@ -7,7 +9,7 @@ export let data: Card[] = [
     resources: [
       {
         name: "Godot ",
-        icon: "Godot logo",
+        icon: SiGodotengine,
         url: "https://docs.godotengine.org/en/stable/getting_started/introduction/index.html",
       },
       {
@@ -92,7 +94,7 @@ export let data: Card[] = [
         url: "https://github.com/TYPESAFE-RUSTY",
       },
       {
-        name: "linkedIn",
+        name: "linkedin",
         url: "https://www.linkedin.com/in/sahilsingh03122003/",
       },
       {
@@ -125,7 +127,7 @@ export let data: Card[] = [
         url: "https://github.com/GavenDcosta",
       },
       {
-        name: "linkedIn",
+        name: "linkedin",
         url: "https://www.linkedin.com/in/gaven-dcosta-b18165239/",
       },
       {
@@ -158,7 +160,7 @@ export let data: Card[] = [
         url: "https://github.com/Merwin-Rebello",
       },
       {
-        name: "linkedIn",
+        name: "linkedin",
         url: "https://www.linkedin.com/in/merwin-rebello-102557289/",
       },
       {
@@ -190,7 +192,7 @@ export let data: Card[] = [
         "url": "https://github.com/TheShaunRodrigues"
       },
       {
-        "name": "linkedIn",
+        "name": "linkedin",
         "url": "https://www.linkedin.com/in/shaun-rodrigues-b4b7642b5/"
       },
       {

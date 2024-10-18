@@ -1,78 +1,161 @@
 "use client";
-import React from "react";
-import { Card as C, url } from '@/types';
-import { Tilt } from 'react-tilt';
 
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa6";
-import { SiGodotengine } from "react-icons/si";
+import React from "react";
+import { Card as C, Resource } from "@/types";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaTwitter,
+  FaYoutube,
+  FaTiktok,
+  FaDiscord,
+  FaTwitch,
+  FaReddit,
+  FaPinterest,
+  FaSnapchat,
+  FaWhatsapp,
+  FaTelegram,
+  FaMedium,
+  FaDev,
+  FaDribbble,
+  FaBehance,
+  FaStackOverflow,
+  FaGitlab,
+  FaCodepen,
+  FaVimeo,
+  FaSoundcloud,
+  FaSpotify,
+  FaApple,
+  FaFlickr,
+  FaQuora,
+  FaTumblr,
+  FaKickstarter,
+  FaPatreon,
+} from "react-icons/fa6";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "./ui/card";
+import { ScrollArea } from "./ui/scroll-area";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 const MAX_DESCRIPTION_LENGTH = 100;
 const MAX_SOCIALS = 5;
-const MAX_RESOURCE = 3;
-const MAX_NAME_LENGTH = 27;
+const MAX_NAME_LENGTH = 25;
 
-function getIcon(data: url, key: number) {
-    let { name, url } = data;
-    //(note for future me) remember to compare url to name 
-    switch (name.toLowerCase().trim()) {
-        case "github" || "git hub" || "git-hub":
-            return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-        case "linkedin" || "linked in":
-            return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-        case "instagram":
-            return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        case "facebook":
-            return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-        case "twitter" || "x":
-            return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-    }
+const socialIcons: Record<string, JSX.Element> = {
+  github: <FaGithub />,
+  linkedin: <FaLinkedin />,
+  instagram: <FaInstagram />,
+  facebook: <FaFacebook />,
+  twitter: <FaTwitter />,
+  youtube: <FaYoutube />,
+  tiktok: <FaTiktok />,
+  discord: <FaDiscord />,
+  twitch: <FaTwitch />,
+  reddit: <FaReddit />,
+  pinterest: <FaPinterest />,
+  snapchat: <FaSnapchat />,
+  whatsapp: <FaWhatsapp />,
+  telegram: <FaTelegram />,
+  medium: <FaMedium />,
+  devto: <FaDev />,
+  dribbble: <FaDribbble />,
+  behance: <FaBehance />,
+  stackOverflow: <FaStackOverflow />,
+  gitlab: <FaGitlab />,
+  codepen: <FaCodepen />,
+  vimeo: <FaVimeo />,
+  soundcloud: <FaSoundcloud />,
+  spotify: <FaSpotify />,
+  appleMusic: <FaApple />,
+  flickr: <FaFlickr />,
+  quora: <FaQuora />,
+  tumblr: <FaTumblr />,
+  kickstarter: <FaKickstarter />,
+  patreon: <FaPatreon />,
+};
 
-    return <></>
+function getIcon(data: Resource, key: number) {
+  const { name, url } = data;
+  const IconComponent = socialIcons[name];
+
+  if (!IconComponent) return null;
+
+  return (
+    <Button variant="ghost" asChild size={"icon"}>
+      <a key={key} href={url} target="_blank" rel="noopener noreferrer">
+        {IconComponent}
+      </a>
+    </Button>
+  );
 }
 
-const defaultOptions = {
-    reverse: true,  // reverse the tilt direction
-    max: 20,     // max tilt rotation (degrees)
-    perspective: 1000,   // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1,    // 2 = 200%, 1.5 = 150%, etc..
-    speed: 50,   // Speed of the enter/exit transition
-    transition: true,   // Set a transition on enter/exit.
-    axis: null,   // What axis should be disabled. Can be X or Y.
-    reset: true,    // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
-}
-
-export default function Card({ className, data }: { className: string, data: C }) {
-    return (
-        <Tilt options={defaultOptions} className={className} style={{ height: 300, width: 300 }}>
-            <h2>{data.name}</h2>
-            <div className="socials">
-                {
-                    // display only top 5 social media handles
-                    data.socials.map((element, index) => index < MAX_SOCIALS && <React.Fragment key={index}>{getIcon(element, index)}</React.Fragment>)
-                }
-            </div>
-            <p style={{ width: "100%", marginBlockStart: "0.5rem" }}>
-                {
-                    // dont display extra long descriptions
-                    data.description.length <= MAX_DESCRIPTION_LENGTH ? data.description : `${data.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`
-                }</p>
-
-            <h3 style={{ fontSize: "medium", marginBlock: "1rem 0.5rem" }}>Resources I&apos;d love to share:</h3>
-            <ul>
-                {
-                    data.resources.map((resource, index) => (index <=MAX_RESOURCE && <li key={index} style={{ marginBlockEnd: "0.25rem" }}>
-                        <a
-                            href={resource.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {resource.name.length <= MAX_NAME_LENGTH ? resource.name : `${resource.name.slice(0,MAX_NAME_LENGTH )}...`}
-                            {resource.icon && <SiGodotengine fill="#478cbf"/>}
-                        </a>
-                    </li>))
-                }
-            </ul>
-        </Tilt>
-    )
+export default function BlogCard({ data }: { data: C }) {
+  return (
+    <TooltipProvider>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-xl font-bold capitalize">{data.name}</CardTitle>
+          <div className="flex items-center gap-1">
+            {data.socials.map(
+              (element, index) => index < MAX_SOCIALS && getIcon(element, index)
+            )}
+          </div>
+          <CardDescription>
+            {data.description.length <= MAX_DESCRIPTION_LENGTH
+              ? data.description
+              : `${data.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <h3 className="text-sm font-medium mb-2">
+            Resources I'd love to share:
+          </h3>
+          <ScrollArea className="h-24">
+            {data.resources.map((resource, index) => {
+              return (
+                <div key={index} className="mb-1">
+                  <Tooltip>
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline flex items-center gap-1"
+                    >
+                      <span>
+                        {resource.icon && (
+                          <resource.icon className="ml-2" fill="#478cbf" />
+                        )}
+                      </span>
+                      <TooltipTrigger>
+                        {resource.name.length <= MAX_NAME_LENGTH
+                          ? resource.name
+                          : `${resource.name.slice(0, MAX_NAME_LENGTH)}...`}
+                      </TooltipTrigger>
+                    </a>
+                    <TooltipContent>
+                      <p>{resource.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </div>
+              );
+            })}
+          </ScrollArea>
+        </CardContent>
+      </Card>
+    </TooltipProvider>
+  );
 }
