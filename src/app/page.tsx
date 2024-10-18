@@ -11,41 +11,19 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useState, useEffect } from "react"; // Import useEffect
 import RetroGrid from "@/components/ui/retro-grid";
 import NumberTicker from "@/components/ui/number-ticker";
-import { Info, MoveRight, ArrowUp, Search } from "lucide-react"; // Import ArrowUp icon
+import { Info, MoveRight, ArrowUp } from "lucide-react"; // Import ArrowUp icon
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 let cards: C[] = [...template, ...data];
 
 export default function Home() {
   const [items, setItems] = useState<C[]>(cards.slice(0, 20));
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<C[]>([]);
   const [showScroll, setShowScroll] = useState(false); // State to show/hide the button
-
-  // Configure Fuse.js options
-  const fuse = new Fuse(cards, {
-    keys: ["name", "description"],
-    threshold: 0.4,
-  });
-
-  // Handle the search input change
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-
-    if (query) {
-      const results = fuse.search(query).map((result) => result.item);
-      setSearchResults(results);
-    } else {
-      setSearchResults([]);
-    }
-  };
 
   // Function to load more data when using infinite scroll
   const loadMoreData = () => {
-    setItems(items.concat(cards.slice(items.length, items.length + 20)));
+    setItems((prevItems) => prevItems.concat(cards.slice(prevItems.length, prevItems.length + 20)));
   };
 
   // Handle scroll event
@@ -62,9 +40,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Data to be rendered (either search results or the original list)
-  const displayedCards = searchQuery ? searchResults : items;
-
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -78,7 +53,7 @@ export default function Home() {
             <section className="flex flex-col gap-4">
               <div>
                 <NumberTicker
-                  value={2100}
+                  value={cards.length}
                   className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-5xl md:text-7xl font-bold leading-none tracking-tighter text-transparent"
                 />
                 <h3 className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-5xl md:text-7xl font-bold leading-none tracking-tighter text-transparent">
@@ -97,7 +72,7 @@ export default function Home() {
                     <Info />
                     <span>Start by editing</span>
                     <code className="rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
-                      src/DataStore.json
+                      src/DataStore.ts
                     </code>
                   </div>
 
@@ -117,26 +92,15 @@ export default function Home() {
           <RetroGrid />
         </div>
 
-        <div className="flex justify-center items-center gap-2 p-4 sticky top-0 w-full bg-zinc-950">
-          <Search className="w-4 h-4"/>
-          <Input
-            type="text"
-            placeholder="Search contributions..."
-            value={searchQuery}
-            onChange={handleSearch}
-            className="w-full"
-          />
-        </div>
-
         {/* Infinite Scroll for Cards */}
         <InfiniteScroll
-          dataLength={displayedCards.length}
+          dataLength={items.length}
           next={loadMoreData}
           hasMore={items.length < cards.length}
           loader={<h4>Loading...</h4>}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-4">
-            {displayedCards.map((card, index) => (
+            {items.map((card, index) => (
               <Card key={index} data={card} />
             ))}
           </div>
