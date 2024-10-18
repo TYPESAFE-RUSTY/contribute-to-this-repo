@@ -2,30 +2,32 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import Fuse from "fuse.js"; // Import Fuse.js
+import Fuse from "fuse.js";
 
 import Card from "@/components/Card";
 import { data } from "@/DataStore";
 import { Card as C, template } from "@/types";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Import useEffect
 import RetroGrid from "@/components/ui/retro-grid";
 import NumberTicker from "@/components/ui/number-ticker";
-import { Info, MoveRight } from "lucide-react";
+import { Info, MoveRight, ArrowUp, Search } from "lucide-react"; // Import ArrowUp icon
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 let cards: C[] = [...template, ...data];
 
 export default function Home() {
   const [items, setItems] = useState<C[]>(cards.slice(0, 20));
-  const [searchQuery, setSearchQuery] = useState(""); // State to store the search query
-  const [searchResults, setSearchResults] = useState<C[]>([]); // State to store the search results
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<C[]>([]);
+  const [showScroll, setShowScroll] = useState(false); // State to show/hide the button
 
   // Configure Fuse.js options
   const fuse = new Fuse(cards, {
-    keys: ["name","description"], // Specify the fields to search through
-    threshold: 0.4, // Adjust the search sensitivity (lower value = more strict matches)
+    keys: ["name", "description"],
+    threshold: 0.4,
   });
 
   // Handle the search input change
@@ -34,11 +36,9 @@ export default function Home() {
     setSearchQuery(query);
 
     if (query) {
-      // Perform the search using Fuse.js
-      const results = fuse.search(query).map((result) => result.item); // Extract the matching items
+      const results = fuse.search(query).map((result) => result.item);
       setSearchResults(results);
     } else {
-      // If query is empty, reset to the original card list
       setSearchResults([]);
     }
   };
@@ -48,8 +48,27 @@ export default function Home() {
     setItems(items.concat(cards.slice(items.length, items.length + 20)));
   };
 
+  // Handle scroll event
+  const handleScroll = () => {
+    if (window.scrollY > 200) {
+      setShowScroll(true);
+    } else {
+      setShowScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Data to be rendered (either search results or the original list)
   const displayedCards = searchQuery ? searchResults : items;
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <TooltipProvider>
@@ -97,15 +116,18 @@ export default function Home() {
           </span>
           <RetroGrid />
         </div>
-        <div className="flex justify-center p-4">
-          <input
+
+        <div className="flex justify-center items-center gap-2 p-4 sticky top-0 w-full bg-zinc-950">
+          <Search className="w-4 h-4"/>
+          <Input
             type="text"
-            placeholder="Search cards..."
+            placeholder="Search contributions..."
             value={searchQuery}
             onChange={handleSearch}
-            className="border rounded-lg p-2 w-80"
+            className="w-full"
           />
         </div>
+
         {/* Infinite Scroll for Cards */}
         <InfiniteScroll
           dataLength={displayedCards.length}
@@ -119,6 +141,17 @@ export default function Home() {
             ))}
           </div>
         </InfiniteScroll>
+
+        {/* Back to Top Button */}
+        {showScroll && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-4 right-4 p-2 bg-zinc-950 text-white border rounded-full shadow-md hover:bg-zinc-900 transition duration-200"
+            aria-label="Back to Top"
+          >
+            <ArrowUp />
+          </button>
+        )}
 
         <footer className="bg-background text-center p-4 mt-8 border-t flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
           <span>In Collaboration With</span>

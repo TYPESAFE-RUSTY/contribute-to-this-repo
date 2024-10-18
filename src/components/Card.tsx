@@ -108,16 +108,25 @@ export default function BlogCard({ data }: { data: C }) {
     <TooltipProvider>
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-bold capitalize">{data.name}</CardTitle>
+          <CardTitle className="text-xl font-bold capitalize">
+            {data.name}
+          </CardTitle>
           <div className="flex items-center gap-1">
             {data.socials.map(
               (element, index) => index < MAX_SOCIALS && getIcon(element, index)
             )}
           </div>
           <CardDescription>
-            {data.description.length <= MAX_DESCRIPTION_LENGTH
-              ? data.description
-              : `${data.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`}
+            <Tooltip>
+              <TooltipTrigger className="text-left">
+                {data.description.length <= MAX_DESCRIPTION_LENGTH
+                  ? data.description
+                  : `${data.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`}
+              </TooltipTrigger>
+              <TooltipContent className="max-w-80">
+                <p>{data.description}</p>
+              </TooltipContent>
+            </Tooltip>
           </CardDescription>
         </CardHeader>
         <CardContent>
