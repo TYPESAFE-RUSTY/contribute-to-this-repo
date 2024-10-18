@@ -1,6 +1,7 @@
 import { GoDot } from "react-icons/go";
 import { Card } from "./types";
-import { SiGodotengine } from "react-icons/si";
+import { SiDevdotto, SiGodotengine, SiMagic, SiShadcnui, SiVercel, SiYoutube } from "react-icons/si";
+import { FaDev } from "react-icons/fa6";
 export const data: Card[] = [
   {
     name: "Gaurav",
@@ -226,6 +227,56 @@ export const data: Card[] = [
       {
         "name": "instagram",
         "url": "https://www.instagram.com/v_i_nay._.20/"
+      }
+    ]
+  },
+  {
+    name: "Om Jannu",
+    description: "I'm a software developer with a knack for turning bugs into chuckles. I code with a side of humor, making your projects both functional and fun.",
+    resources: [
+      {
+        name: "Dev.to",
+        url: "https://dev.to/",
+        icon:SiDevdotto
+      },
+      {
+        name: "So You Think You Know Git",
+        url: "hhttps://www.youtube.com/watch?v=aolI_Rz0ZqY",
+        icon:SiYoutube
+      },
+      {
+        name: "Dev Resources",
+        url: "https://devresourc.es/",
+        icon:FaDev
+      },
+      {
+        name: "Shadcn UI",
+        url: "https://ui.shadcn.com/",
+        icon: SiShadcnui
+      },
+      {
+        name: "Magic UI",
+        url: "https://magicui.design/",
+        icon: SiMagic
+      },
+      {
+        name: "Vercel",
+        url: "https://vercel.com/home/",
+        icon: SiVercel
+      }
+    ],
+    socials: [
+      {
+        name: "github",
+        url: "https://github.com/Vinay4912"
+      },
+      {
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/vinay-pawar-a5613327a/"
+      },
+      {
+        name: "instagram",
+        url: "https://www.instagram.com/v_i_nay._.20/"
       }
     ]
   },
