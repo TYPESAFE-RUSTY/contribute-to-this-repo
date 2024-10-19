@@ -271,4 +271,32 @@ export let data: Card[] = [
       }
     ]
   },
+  {
+    "name": "Aarol D'Souza",
+    "description": "Avid Competitive Coder, Math Enthusiast and Aspiring Software Developer",
+    "resources": [
+      {
+        "name": "Advent of Code 23",
+        "url": "https://github.com/AarDG10/Advent-of-Code"
+      },
+      {
+        "name": "Codeforces Acc.",
+        "url": "https://codeforces.com/profile/aarol.dsouza"
+      },
+      {
+        "name": "Codechef Acc.",
+        "url": "https://www.codechef.com/users/getes07"
+      }
+    ],
+    "socials": [
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/aarol-d-souza-a25893259/"
+      },
+      {
+        "name": "Github",
+        "url": "https://github.com/AarDG10"
+      }
+    ]
+  },
 ];
