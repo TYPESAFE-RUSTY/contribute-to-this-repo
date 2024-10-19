@@ -237,7 +237,7 @@ export let data: Card[] = [
       },
       {
         name: "So You Think You Know Git",
-        url: "hhttps://www.youtube.com/watch?v=aolI_Rz0ZqY",
+        url: "https://www.youtube.com/watch?v=aolI_Rz0ZqY",
       },
       {
         name: "Dev Resources",
