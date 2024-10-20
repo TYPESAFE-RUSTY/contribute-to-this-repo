@@ -1,6 +1,40 @@
 import { Card } from "./types";
 export let data: Card[] = [
   {
+    name: "Sanjay Yadav",
+    description:
+      "Hi I am Sanjay . Web Developer with keen Interest in Data Analytics.",
+    resources: [
+      {
+        name: "Alteryx : Data Analytics Tool and Learning Resources",
+        url: "https://community.alteryx.com/t5/Learning-Paths/tkb-p/learning-path",
+      },
+      {
+        name: "AlgoMap.io : DSA RoadMap",
+        url: "https://algomap.io/",
+      },
+      {
+        name: "TLE Eliminators : CP-Sheet",
+        url: "https://www.tle-eliminators.com/cp-sheet",
+      },
+    ],
+    socials: [
+      {
+        name: "github",
+        url: "https://github.com/sanjay-yadav-05",
+      },
+      {
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/sanjay-yadav-2813852ab/",
+      },
+      {
+        name: "instagram",
+        url: "https://www.instagram.com/venom_05_8483/",
+      },
+    ],
+  },
+  
+  {
     name: "Gaurav",
     description:
       "Hi I am Gaurav . Full Stack Developer with Interest in Competitive Programming and System Design.",
