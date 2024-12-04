@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 
 import LenisProvider from "@/wrappers/LensiProvider";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,7 @@ export default function RootLayout({
         <LenisProvider>
           {children}
         </LenisProvider>
+        <ScrollToTop />
       </body>
     </html>
   );

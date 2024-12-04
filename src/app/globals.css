@@ -113,3 +113,20 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+.scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.scroll:hover {
+  background-color: #424141;
+}
