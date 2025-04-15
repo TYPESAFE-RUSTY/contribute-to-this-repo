@@ -1,5 +1,38 @@
 import { Card } from "./types";
 export let data: Card[] = [
+    {
+      "name": "A S Harish Kumar",
+      "description": "I am an aspiring backend developer and love to explore new tech stacks",
+      "resources": [
+          {
+              "name": "Udemy",
+              "url": "https://udemy.com"
+          },
+          {
+              "name": "You Tube",
+              "url": "https://youtube.com"
+          },
+          {
+              "name": "W3Schools",
+              "url": "https://w3schools.com"
+          }
+      ],
+      "socials": [
+          {
+              "name": "linkedin",
+              "url": "https://www.linkedin.com/in/a-s-harish-kumar/"
+          },
+          {
+              "name": "github",
+              "url": "https://github.com/asharish001"
+          },
+          {
+              "name": "instagram",
+              "url": "https://www.instagram.com/softwaredeveloperz"
+          }
+      ]
+  },
+
   {
     "name": "Yash Khatpe",
     "description": "I am full stack developers and love to explore new web related technologies",
