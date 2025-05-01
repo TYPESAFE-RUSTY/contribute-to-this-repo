@@ -1,5 +1,37 @@
 import { Card } from "./types";
 export let data: Card[] = [
+  {
+    "name": "Ananya Solanki",
+    "description": "I'm an aspiring Software Engineer. Interested in exploring GenAI. Believes in continuous learning.",
+    "resources": [
+      {
+        "name": "BigGAN Studio",
+        "url": "https://huggingface.co/spaces/anniy123/Ananyas_BigGAN_Studio"
+      },
+      {
+        "name": "Explore the Universe",
+        "url": "https://stars.chromeexperiments.com/"
+      },
+      {
+        "name": "Time Travelling Letter",
+        "url": "https://www.futureme.org/letters/new"
+      }
+    ],
+    "socials": [
+      {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/ananya-solanki-b56a84245/"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/ananyasolanki1"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/ananya__215/"
+      }
+    ]
+  },
     {
       "name": "A S Harish Kumar",
       "description": "I am an aspiring backend developer and love to explore new tech stacks",
