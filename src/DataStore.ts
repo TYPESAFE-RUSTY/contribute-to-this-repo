@@ -1,5 +1,40 @@
 import { Card } from "./types";
 export let data: Card[] = [
+
+  {
+    "name": "paaleee",
+    "description": "a student",
+    "resources": [
+        {
+            "name": "my github account",
+            "url": "https://github.com/YG-paaleee"
+        },
+        {
+            "name": "my github account",
+            "url": "https://github.com/YG-paaleee"
+        },
+        {
+            "name": "my github account",
+            "url": "https://github.com/YG-paaleee"
+        }
+    ],
+    "socials": [
+        {
+            "name": "my github account",
+            "url": "https://github.com/YG-paaleee"
+        },
+        {
+            "name": "my github account",
+            "url": "https://github.com/YG-paaleee"
+        },
+        {
+            "name": "my github account",
+            "url": "https://github.com/YG-paaleee"
+        }
+    ]
+},
+
+  
   {
     "name": "Ananya Solanki",
     "description": "I'm an aspiring Software Engineer. Interested in exploring GenAI. Believes in continuous learning.",
