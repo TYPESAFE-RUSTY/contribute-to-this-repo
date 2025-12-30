@@ -1,6 +1,38 @@
 import { Card } from "./types";
 export let data: Card[] = [
   {
+    "name": "Nishtha Jain",
+    "description": "Hi! I’m Nishtha, a Computer Science student exploring AI, ML, and open-source development. I love learning new technologies and building projects step-by-step",
+    "resources": [
+        {
+            "name": "GeeksForGeeks DSA Guide",
+            "url": "https://www.geeksforgeeks.org/data-structures/"
+        },
+        {
+            "name": "Udemy",
+            "url": "https://udemy.com"
+        },
+        {
+            "name": "YouTube",
+            "url": "https://youtube.com"
+        }
+    ],
+    "socials": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/nishtha-jain-a69163326/"
+        },
+        {
+            "name": "github",
+            "url": "https://github.com/Nishtha027"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/"
+        }
+    ]
+},
+  {
     "name": "Ananya Solanki",
     "description": "I'm an aspiring Software Engineer. Interested in exploring GenAI. Believes in continuous learning.",
     "resources": [
