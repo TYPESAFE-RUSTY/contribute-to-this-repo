@@ -26,6 +26,8 @@ export let data: Card[] = [
       "name": "GitHub",
       "url": "https://github.com/arunnaik0110"  
   },
+]
+},
   {
     "name": "Nishtha Jain",
     "description": "Hi! I’m Nishtha, a Computer Science student exploring AI, ML, and open-source development. I love learning new technologies and building projects step-by-step",
