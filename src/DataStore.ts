@@ -1,6 +1,32 @@
 import { Card } from "./types";
 export let data: Card[] = [
   {
+  "name": "Arun Naik",
+  "description":"Hi! I'm Arun Naik, I am a Computer Science graduate with a strong interest in building and contributing to valuable project ideas, while helping projects take shape and succeed.",
+  "resources": [
+    {
+      "name": "java docs",
+      "url":"https://dev.java/learn/"
+    },
+    {
+      "name": "Sheryians Coding School,React JS Course",
+      "url": "https://www.youtube.com/watch?v=3LRZRSIh_KE&list=PLbtI3_MArDOm777bemDCy1abP1t1Rnnbx",
+    },
+    {
+      "name": "5 Express Middleware Libraries Every Developer Should Know",
+      "url": "https://blog.bitsrc.io/5-express-middleware-libraries-every-developer-should-know-94e2728f7503",
+    },
+  ]
+  ,  "socials": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/arunnaik1006/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/arunnaik0110"  
+  },
+  {
     "name": "Nishtha Jain",
     "description": "Hi! I’m Nishtha, a Computer Science student exploring AI, ML, and open-source development. I love learning new technologies and building projects step-by-step",
     "resources": [
