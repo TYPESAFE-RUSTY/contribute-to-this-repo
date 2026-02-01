@@ -279,7 +279,7 @@ It is very normal for a reviewer to ask for changes on a PR. Think of it as good
 ---
 ### Acknowledgements
 
-This project is heavily inspired by [Skynapse/Contribute-To-This-Project](https://github.com/Syknapse/Contribute-To-This-Project). I created this separate repository to avoid overwhelming the maintainers of the original project with numerous pull requests.
+This project is heavily inspired by [Skynapse/Contribute-To-This-Project](https://github.com/Syknapse/Contribute-To-This-Project). I created this separate repository to avoid overwhelming the maintainers of the original project with numerous pull requests (which never came 😅).
 
 ### License
 
