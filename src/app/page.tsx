@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <h1 className={styles.logo}>CONTRIBUTE TO THIS PROJECT</h1>
+        <h1 className={styles.logo}>{data.length} CONTRIBUTED TO THIS PROJECT</h1>
         <br />
         <p>
           Learn GitHub Basics and Make Your First Contribution Quickly and Easily.
