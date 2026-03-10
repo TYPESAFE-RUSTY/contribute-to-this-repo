@@ -13,7 +13,8 @@ export interface url {
 
 export let template: Card[] = [{
     "name": "YOUR NAME",
-    "description": "ABOUT YOU",
+    "description": "ABOUT YOU - Here Add something about yourself.",
+    // Max 3 Resources
     "resources": [
         {
             "name": "RESOURCE 1",
@@ -28,18 +29,35 @@ export let template: Card[] = [{
             "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         }
     ],
+    /* Max 5 Socials
+     * socials: [
+     *     { name: "github", url: "https://your-link-to-github/" },
+     *     { name: "linkedin", url: "https://your-link-to-linkedin/" },
+     *     { name: "instagram", url: "https://your-link-to-instagram/" },
+     *     { name: "facebook", url: "https://your-link-to-facebook/" },
+     *     { name: "twitter", url: "https://your-link-to-twitter/" }
+     * ],
+     */
     "socials": [
         {
-            "name": "SOCIAL 1",
+            "name": "github",
             "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
         },
         {
-            "name": "SOCIAL 2",
-            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
+            "name": "linkedin",
+            "url": "#"
         },
         {
-            "name": "SOCIAL 3",
-            "url": "https://typesafe-rusty.github.io/contribute-to-this-repo/"
+            "name": "instagram",
+            "url": "#"
+        },
+        {
+            "name": "facebook",
+            "url": "#"
+        },
+        {
+            "name": "twitter",
+            "url": "#"
         }
     ]
 }]

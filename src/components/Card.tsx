@@ -15,15 +15,20 @@ function getIcon(data: url, key: number) {
     let { name, url } = data;
     //(note for future me) remember to compare url to name 
     switch (name.toLowerCase().trim()) {
-        case "github" || "git hub" || "git-hub":
+        case "github":
+        case "git hub":
+        case "git-hub":
             return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-        case "linkedin" || "linked in":
+        case "linkedin":
+        case "linked in":
+        case "linked-in":
             return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         case "instagram":
             return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
         case "facebook":
             return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-        case "twitter" || "x":
+        case "twitter":
+        case "x":
             return <a key={key} href={url} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
     }
 
@@ -52,7 +57,7 @@ export default function Card({ className, data }: { className: string, data: C }
                     data.socials.map((element, index) => index < MAX_SOCIALS && <React.Fragment key={index}>{getIcon(element, index)}</React.Fragment>)
                 }
             </div>
-            <p style={{ width: "100%", marginBlockStart: "0.5rem" }}>
+            <p style={{ width: "100%", marginBlockStart: "0.5rem", textAlign: "justify" }}>
                 {
                     // dont display extra long descriptions
                     data.description.length <= MAX_DESCRIPTION_LENGTH ? data.description : `${data.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`
@@ -61,7 +66,7 @@ export default function Card({ className, data }: { className: string, data: C }
             <h3 style={{ fontSize: "medium", marginBlock: "1rem 0.5rem" }}>Resources I&apos;d love to share:</h3>
             <ul>
                 {
-                    data.resources.map((resource, index) => (index <=MAX_RESOURCE && <li key={index} style={{ marginBlockEnd: "0.25rem" }}>
+                    data.resources.map((resource, index) => (index <=MAX_RESOURCE && <li key={index} style={{ marginLeft: "1rem", marginBlockEnd: "0.25rem" }}>
                         <a
                             href={resource.url}
                             target="_blank"
